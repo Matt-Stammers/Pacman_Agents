@@ -10,21 +10,11 @@ def tinyMazeSearch(problem):
     w = Directions.WEST
     return  [s, s, w, s, w, w, s, w]
     
-def depthFirstSearch(problem):
+def crazyAgent(problem):
     """
-    Search the deepest nodes in the search tree first.
-
-    Your search algorithm needs to return a list of actions that reaches the
-    goal. Make sure to implement a graph search algorithm.
-
-    To get started, you might want to try some of these simple commands to
-    understand the search problem that is being passed in:
-
-    print "Start:", problem.getStartState()
-    print "Is the start a goal?", problem.isGoalState(problem.getStartState())
-    print "Start's successors:", problem.getSuccessors(problem.getStartState())
+    This Agent takes some crazy turns whilst exploring tinyMaze.
+    He can also detect the start State, Goal State and Successors but doesn't actually make use of them yet.
     """
-    "*** YOUR CODE HERE ***"
     from game import Directions
     print "Start:", problem.getStartState()
     print "Is the start a goal?", problem.isGoalState(problem.getStartState())
@@ -32,4 +22,4 @@ def depthFirstSearch(problem):
     s = Directions.SOUTH
     w = Directions.WEST
     n = Directions.NORTH
-    return  [s, s, w, s, w, w, n, s, s, w, s, w]
+    return  [s, s, w, s, w, w, n, n, n, s, s, s, w, s, w]
