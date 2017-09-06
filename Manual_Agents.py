@@ -22,4 +22,4 @@ def crazyAgent(problem):
     s = Directions.SOUTH
     w = Directions.WEST
     n = Directions.NORTH
-    return  [s, s, w, s, w, w, n, n, n, s, s, s, w, s, w]
+    return  [s, s, w, s, w, w, n, s, s, w]
