@@ -6,7 +6,7 @@
 
 def path_exists(P, node1, node2):
     """
-    This function checks whether a path exists between two nodes (node1, node2) in graph P =Pacman.
+    This function checks whether a path exists between two nodes (node1, node2) in graph P = Pacman.
     """
     visited_nodes = set()
     
@@ -48,7 +48,7 @@ def path_exists(P, node1, node2):
             # Add neighbors of current node that have not yet been visited
             queue.extend([n for n in neighbors if n not in visited_nodes])
             
-# 3) ok so now we just need to add return False if no path can be reached:
+# 3) ok so now we just need to add return False if no path can be reached after the last leaf is explored.
 
 def path_exists(P, node1, node2):
     """
@@ -58,7 +58,7 @@ def path_exists(P, node1, node2):
     queue = [node1]
     
     for node in queue:  
-        neighbors = G.neighbors(node)
+        neighbors = P.neighbors(node)
         if node2 in neighbors:
             print('Path exists between nodes {0} and {1}'.format(node1, node2))
             return True
